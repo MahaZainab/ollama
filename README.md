@@ -1,2 +1,2 @@
 # ollama
-Here is the code to work with 
+Here is the code to work with ollama
