@@ -1,2 +1,2 @@
 # ollama
-Here is the 
+Here is the code 
