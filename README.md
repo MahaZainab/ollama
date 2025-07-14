@@ -3,8 +3,10 @@ Here is the code to work with ollama and how ollama can be used to interact with
 The models that we are aiming to implement are:
 
 Datasets:
-1. CodeQA
-2. CS1QA
+
+1. CodeQA Maha
+
+2. CS1QA Kangyou
 
 Gernal purpose 
 
