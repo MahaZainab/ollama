@@ -59,3 +59,30 @@ with open(output_path, 'w', encoding='utf-8') as f:
     json.dump(updated_data, f, indent=2)
 
 print(f"\n✅ Predictions saved to: {output_path}")
+
+def main():
+    json_path = 'smallest_dataset.json'
+    data = load_json_data(json_path)
+    vectorizer, tfidf_matrix = create_tfidf_vectors(data)
+
+    updated_data = []
+    for entry in tqdm(data, desc='Generating predictions'):
+        question = entry['question']
+        code = entry['code']
+        query = f"{code}\n{question}"
+        relevant_docs = retrieve_documents(query, data, vectorizer, tfidf_matrix)
+        if not relevant_docs:
+            prediction = 'No relevant documents found.'
+        else:
+            try:
+                prediction = generate_response_with_chain_of_thought(query, relevant_docs)
+            except Exception as e:
+                prediction = f'Error: {str(e)}'
+        entry['prediction'] = prediction
+        updated_data.append(entry)
+
+    output_path = 'output_data_with_predictions.json'
+    with open(output_path, 'w', encoding='utf-8') as f:
+        json.dump(updated_data, f, indent=2)
+
+    print(f"\n✅ Predictions saved to: {output_path}")
