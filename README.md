@@ -15,8 +15,9 @@ Gernal purpose
     CoT_llama3_ollama.ipynb .py
 
         output_data_with_predictions.json
-        
+
         Evaluation_matrices.ipynb
+        
         ![alt text](image.png)
 2. Mistral
 
