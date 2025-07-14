@@ -12,7 +12,8 @@ Gernal purpose
 
 1. Llama3
 
-    CoT_llama3_ollama.ipynb
+    CoT_llama3_ollama.ipynb .py
+
         output_data_with_predictions.json
         Evaluation_matrices.ipynb
         ![alt text](image.png)
