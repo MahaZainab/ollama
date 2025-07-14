@@ -86,5 +86,6 @@ def main():
         json.dump(updated_data, f, indent=2)
 
     print(f"\n✅ Predictions saved to: {output_path}")
+
 if __name__ == "__main__":
     main()
