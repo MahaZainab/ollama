@@ -7,7 +7,9 @@ Datasets:
 2. CS1QA
 
 Gernal purpose 
+
 1. Llama3
+
     CoT_llama3_ollama.ipynb
         output_data_with_predictions.json
         Evaluation_matrices.ipynb
