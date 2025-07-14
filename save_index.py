@@ -21,7 +21,7 @@ class CodeBERTEmbedder:
         return np.array(embeddings)
 
 
-def load_dataset(path="dataset.json"):
+def load_dataset(path="complete_dataset.json"):
     with open(path, "r") as f:
         return json.load(f)
 
